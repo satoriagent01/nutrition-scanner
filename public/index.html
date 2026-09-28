@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nutrition Scanner</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <h1>🍎 Nutrition Scanner</h1>
+    <p>Scan nutrition labels, track your diet — free, no ads.</p>
+  </header>
+
+  <main>
+    <!-- Scan Section -->
+    <section id="scan-section">
+      <h2>Scan a Product</h2>
+      <div class="scan-area">
+        <button id="take-photo-btn">📷 Take Photo</button>
+        <input type="file" id="file-input" accept="image/*" capture="environment" hidden>
+        <div id="image-preview" class="hidden">
+          <img id="preview-img" src="" alt="Preview">
+          <button id="scan-btn">🔍 Scan Nutrition</button>
+          <button id="cancel-scan-btn">✕ Cancel</button>
+        </div>
+      </div>
+      <div id="scan-result" class="hidden">
+        <h3>Scanned Nutrition</h3>
+        <div id="nutrition-table"></div>
+        <input type="text" id="product-name" placeholder="Product name">
+        <button id="save-product-btn">💾 Save Product</button>
+      </div>
+      <div id="scan-loading" class="hidden">
+        <p>Scanning... Please wait.</p>
+      </div>
+    </section>
+
+    <!-- My Products Section -->
+    <section id="products-section">
+      <h2>My Products</h2>
+      <div id="products-list"></div>
+    </section>
+
+    <!-- Meal Planner Section -->
+    <section id="meal-section">
+      <h2>Meal Planner</h2>
+      <div class="meal-controls">
+        <input type="date" id="meal-date">
+        <input type="text" id="meal-name" placeholder="Meal name (e.g., Lunch)">
+        <button id="create-meal-btn">➕ Create Meal</button>
+      </div>
+      <div id="meals-list"></div>
+    </section>
+
+    <!-- Daily Summary -->
+    <section id="summary-section">
+      <h2>Daily Summary</h2>
+      <div id="daily-totals"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Nutrition Scanner — Free & Open Source</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
